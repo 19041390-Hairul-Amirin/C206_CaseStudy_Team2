@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 
 public class Item {
+	private String Name;
 	private String Description;
 	private double StartPrice;
 	private double minIncrement;
@@ -10,8 +11,9 @@ public class Item {
 	
 
 
-	public Item(String description, double StartPrice, double minIncrement,String startDate,
+	public Item(String name,String description, double StartPrice, double minIncrement,String startDate,
 			String endDate) {
+		this.Name=name;
 		this.Description = description;
 		this.StartPrice = StartPrice;
 		this.minIncrement = minIncrement;
@@ -47,6 +49,10 @@ public class Item {
 
 	public double getMinIncrement() {
 		return minIncrement;
+	}
+	
+	public String getName() {
+		return Name;
 	}
 
 
