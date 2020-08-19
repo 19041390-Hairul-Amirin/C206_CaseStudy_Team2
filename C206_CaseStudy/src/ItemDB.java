@@ -52,6 +52,7 @@ public class ItemDB  {
 		String EndDate = Helper.readString("Enter End Date > ");
 		Item newitem = new Item(description, startPrice, minIncrement, StartDate, EndDate); 
 		return newitem;
+		
 	}
 	public static void AddItem(ArrayList<Item> itemList, Item newitem) {
 		itemList.add(newitem);
