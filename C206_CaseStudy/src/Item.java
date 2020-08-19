@@ -1,43 +1,37 @@
 import java.time.LocalDate;
 
 public class Item {
-	private int ID;
 	private String Description;
-	private String Price;
-	private String minIncrement;
-	private Boolean IsAvailable;
-	private LocalDate startDate;
-	private LocalDate endDate;
+	private double StartPrice;
+	private double minIncrement;
+	private String startDate;
+	private String endDate;
 	
 	
 
 
-	public Item(int ID, String description, String price, String minIncrement, Boolean isAvailable, LocalDate startDate,
-			LocalDate endDate) {
-		super();
-		this.ID = ID;
+	public Item(String description, double StartPrice, double minIncrement,String startDate,
+			String endDate) {
 		this.Description = description;
-		Price = price;
+		this.StartPrice = StartPrice;
 		this.minIncrement = minIncrement;
-		IsAvailable = isAvailable;
 		this.startDate = startDate;
 		this.endDate = endDate;
 	}
 
 
-	public LocalDate getStartDate() {
+
+
+	public String getStartDate() {
 		return startDate;
 	}
 
 
-	public LocalDate getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
 
 
-	public int getID() {
-		return ID;
-	}
 
 
 	public String getDescription() {
@@ -46,25 +40,18 @@ public class Item {
 
 
 
-	public String getPrice() {
-		return Price;
+	public double getStartPrice() {
+		return StartPrice;
 	}
 
 
-	public String getMinIncrement() {
+	public double getMinIncrement() {
 		return minIncrement;
 	}
 
 
 
-	public Boolean getIsAvailable() {
-		return IsAvailable;
-	}
-
-
-	public void setIsAvailable(Boolean isAvailable) {
-		IsAvailable = isAvailable;
-	}
+	
 	
 	
 	
