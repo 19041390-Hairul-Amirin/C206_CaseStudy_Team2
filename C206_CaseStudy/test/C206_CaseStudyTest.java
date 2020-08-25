@@ -10,9 +10,16 @@ public class C206_CaseStudyTest {
 
 	private Item i1;
 	private ArrayList<Item> itemList;
+
 	private User u1;
 	private ArrayList<User> UserList;
 
+
+
+	
+	private bid b1;
+	private ArrayList<bid> list1;
+	
 
 	public C206_CaseStudyTest() {
 		super();
@@ -21,6 +28,8 @@ public class C206_CaseStudyTest {
 	@Before
 	public void setUp() throws Exception {
 		i1 = new Item("Ball", "Round Ball", 10, 2, "20/8/2020", "25/8/2020");
+		
+		b1 = new bid(1 , "Apple" , "123@gmail.com" , "456@gmail.com" , 10.00);
 
 	}
 
@@ -28,6 +37,9 @@ public class C206_CaseStudyTest {
 	public void tearDown() throws Exception {
 		i1 = null;
 		itemList = null;
+		
+		b1 = null;
+		list1 = null;
 	}
 
 	@Test
@@ -94,6 +106,7 @@ public class C206_CaseStudyTest {
 		assertNotNull("Test if there is valid item arraylist to retrieve item", itemList);
 		
 	}
+
 	@Test// Done by Junwei
 	
 	public void deleteTest() {
@@ -118,6 +131,57 @@ public class C206_CaseStudyTest {
 			
 		}
 		  
+	
+
+	@Test// Done by honwee
+	public void showAllTest() {
+		assertNotNull("Test if there is valid Bid arraylist to retrieve bids" , list1);
+		
+		String allBid = bidMethod.retrieveAll(list1);
+		String testOutput = "";
+		assertEquals("Test that the retrieved itemList is empty?", testOutput, allBid);
+
+
+
 	}
+	@Test// Done by honwee
+	public void addBidTest() {
+		assertNotNull("Check if there is valid item arraylist to add to", list1);
+		bidMethod.addBid(list1);
 
+		assertEquals("Check that Item arraylist size is 1", 1, list1.size());
+		assertSame("Check that Item is added", b1, list1.get(0));
+	}
+	@Test// Done by honwee
+	public void deleteBidTest() {
+		// check if arraryList is empty
+		assertNotNull("check if arraryList is empty", list1);
 
+		// check if arraylist has an item inside
+		assertEquals("Test that CustomerList arraylist size is 1", 1, list1.size());
+
+		// remove customer
+		list1.remove(0);
+
+		// Test if the code list has worked
+		assertEquals("Test that ItemList arraylist size is 1", 0, list1.size());
+	}
+	@Test// Done by honwee
+	public void updatePriceTest() {
+		// check if arraryList is empty
+		assertNotNull("check if arraryList is empty", list1);
+		
+		//update for item
+		b1=new bid(1 , "Apple" , "123@gmail.com" , "456@gmail.com" , 20.00);
+		list1.set(0, b1);
+		
+		//check if item updated
+		assertEquals("Test if price values are added into ArrayList ",b1.getBidPrice(),list1.get(0).getBidPrice());
+	
+	}
+	@Test// Done by honwee
+	public void searchKeywordTest() {
+		assertNotNull("check if arraryList is empty", list1);
+		assertNotNull("Test if there is valid item arraylist to retrieve item", list1);
+	}
+}
