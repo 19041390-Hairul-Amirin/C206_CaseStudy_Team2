@@ -144,7 +144,7 @@ public class UserMethod {
 				}
 			}
 			
-		}//canot
+		}//cannot
 		public static void UserList(ArrayList<User> UserList) {
 			
 			int User = Helper.readInt("Enter User: > ");
