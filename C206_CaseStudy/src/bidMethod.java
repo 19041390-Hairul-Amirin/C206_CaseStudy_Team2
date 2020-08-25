@@ -26,22 +26,39 @@ public class bidMethod {
 	
 	public static void main(String[] args) {
 		
-		menu();
+		
 		ArrayList<bid> list1 = new ArrayList<bid>();
 		
-		int id = Helper.readInt("Enter Bid Id: > ");
-		String name = Helper.readString("Enter name of item: > ");
-		String semail = Helper.readString("Enter email of seller: >");
-		String bemail = Helper.readString("Enter email of buyer: > ");
-		double price = Helper.readDouble("Enter price of bid: > ");
 		
-		list1.add(new bid(id , name , semail , bemail , price));
-		
-		
-		
-		showAll(list1);
-		
-		deleteBid(list1);
+		int option = 0;
+		while (option != 6) {
+			bidMethod.menu();
+			option = Helper.readInt("Enter option > ");
+			 if (option == 1) {
+			        // View all user
+			    	 bidMethod.showAll(list1);
+			        
+			      }
+			 else if (option == 2) {
+			        // View all user
+			    	 bidMethod.addBid(list1);
+			        
+			      }
+			 else if(option ==3) {
+				 bidMethod.deleteBid(list1);;
+			 }
+			 else if(option==4) {
+				 bidMethod.searchKeyword(list1);
+			 }
+			 else if(option ==5) {
+				 bidMethod.updatePrice(list1);
+			 }
+			 else {
+				 System.out.println("Bye!");
+			 }
+
+		}
+
 	}
 	public static void menu() {
 		AuctionShop.setHeader("Online Auction Shop");
@@ -76,6 +93,17 @@ public class bidMethod {
 			
 		
 	}
+	public static void addBid(ArrayList<bid> list1) {
+		int id = Helper.readInt("Enter Bid Id: > ");
+		String name = Helper.readString("Enter name of item: > ");
+		String semail = Helper.readString("Enter email of seller: >");
+		String bemail = Helper.readString("Enter email of buyer: > ");
+		double price = Helper.readDouble("Enter price of bid: > ");
+		
+		list1.add(new bid(id , name , semail , bemail , price));
+		
+	}
+	
 	public static void deleteBid(ArrayList<bid> list1) {
 		int del = Helper.readInt("Enter Bid Id to delete : >");
 		for(int i = 0 ; i<list1.size();i++) {
@@ -121,5 +149,7 @@ public class bidMethod {
 			}
 			
 		}
+		
 	}
+	
 }
