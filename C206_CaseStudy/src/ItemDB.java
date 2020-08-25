@@ -34,7 +34,7 @@ public class ItemDB {
 	}
 
 	public static void ItemMenu() {
-		AuctionShop.setHeader("Online Auction Shop");
+		AuctionShop.setHeader("Manage Items");
 		System.out.println("1. Display Item");
 		System.out.println("2. Add item");
 		System.out.println("3. Delete item");
