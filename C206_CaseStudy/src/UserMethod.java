@@ -126,13 +126,11 @@ public class UserMethod {
 	    UserList.add(new User (name, role, email, password));
 	    System.out.println("User added");
 	  }
-	  
-	  //can't do
+	  //cannot
 	  public static void searchKeyword(ArrayList<User> UserList) {
 			
 			String User = Helper.readString("Enter User: > " );
-			Helper.readInt("Enter New User ID: > ");
-			Helper.readInt("Enter ID: >");
+			int User1 = Helper.readInt("Enter new User > ");
 			
 			for(int i=0 ; i<UserList.size();i++) {
 				if(User == UserList.get(i).getName()) {
@@ -145,18 +143,18 @@ public class UserMethod {
 					System.out.println("Error!");
 				}
 			}
-			// can't do
-		}
+			
+		}//canot
 		public static void UserList(ArrayList<User> UserList) {
 			
-			Helper.readInt("Enter User: > ");
-			Helper.readDouble("Enter new User to update : > ");
+			int User = Helper.readInt("Enter User: > ");
+			double User1 = Helper.readDouble("Enter new User to update : > ");
 			
 			
 				}
 			
 		
-
+		
 	  private static void setHeader(String header) {
 	    // TODO Auto-generated method stub
 	    Helper.line(80, "-");
