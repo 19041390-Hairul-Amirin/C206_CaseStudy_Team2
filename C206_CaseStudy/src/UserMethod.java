@@ -92,6 +92,8 @@ public class UserMethod {
 	    System.out.println("2. Add Item");
 	    System.out.println("3. Delete Item");
 	    System.out.println("4. Exit");
+	    System.out.println("5. Update User");
+	    System.out.println("6. View User");
 	  }
 
 	  private static void itemTypeMenu() {
@@ -124,11 +126,42 @@ public class UserMethod {
 	    UserList.add(new User (name, role, email, password));
 	    System.out.println("User added");
 	  }
+	  
+	  public static void searchKeyword(ArrayList<User> UserList) {
+			
+			String info = Helper.readString("Enter Keyword: > " );
+			int info1 = Helper.readInt("Enter Bid id: > ");
+			double info2 = Helper.readDouble("Enter price: > ");
+			
+			for(int i=0 ; i<UserList.size();i++) {
+				if(info == UserList.get(i).getName()) {
+				System.out.println(String.format("%-10s %-10s %-10s %-10s %-10s", UserList.get(i).getName(), UserList.get(i).getEmail()));		
+				}
+				else if(info == UserList.get(i).getEmail()) {
+					System.out.println(String.format("%-10s %-10s %-10s %-10s %-10s", UserList.get(i).getName(), UserList.get(i).getEmail()));
+				}
+				else {
+					System.out.println("Error!");
+				}
+			}
+			
+		}
+		public static void UserList(ArrayList<User> UserList) {
+			
+			int User = Helper.readInt("Enter User: > ");
+			double User1 = Helper.readDouble("Enter new User to update : > ");
+			
+			
+				}
+			
+		
 
 	  private static void setHeader(String header) {
 	    // TODO Auto-generated method stub
 	    Helper.line(80, "-");
 	    System.out.println(header);
 	    Helper.line(80, "-");
+	    
+	    
 	  }
 	}
