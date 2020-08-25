@@ -131,8 +131,8 @@ public class UserMethod {
 	  public static void searchKeyword(ArrayList<User> UserList) {
 			
 			String User = Helper.readString("Enter User: > " );
-			int User1 = Helper.readInt("Enter New User ID: > ");
-			int User11 = (int) Helper.readDouble("Enter ID: > ");
+			Helper.readInt("Enter New User ID: > ");
+			Helper.readInt("Enter ID: >");
 			
 			for(int i=0 ; i<UserList.size();i++) {
 				if(User == UserList.get(i).getName()) {
@@ -149,8 +149,8 @@ public class UserMethod {
 		}
 		public static void UserList(ArrayList<User> UserList) {
 			
-			int User = Helper.readInt("Enter User: > ");
-			double User1 = Helper.readDouble("Enter new User to update : > ");
+			Helper.readInt("Enter User: > ");
+			Helper.readDouble("Enter new User to update : > ");
 			
 			
 				}
