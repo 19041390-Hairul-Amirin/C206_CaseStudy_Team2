@@ -102,8 +102,10 @@ public class bidMethod {
 		
 		list1.add(new bid(id , name , semail , bemail , price));
 		
+
 		System.out.println("Bid Added!");
 		
+
 	}
 	
 	public static void deleteBid(ArrayList<bid> list1) {
