@@ -127,24 +127,25 @@ public class UserMethod {
 	    System.out.println("User added");
 	  }
 	  
+	  //can't do
 	  public static void searchKeyword(ArrayList<User> UserList) {
 			
-			String info = Helper.readString("Enter Keyword: > " );
-			int info1 = Helper.readInt("Enter Bid id: > ");
-			double info2 = Helper.readDouble("Enter price: > ");
+			String User = Helper.readString("Enter User: > " );
+			int User1 = Helper.readInt("Enter New User ID: > ");
+			int User11 = (int) Helper.readDouble("Enter ID: > ");
 			
 			for(int i=0 ; i<UserList.size();i++) {
-				if(info == UserList.get(i).getName()) {
+				if(User == UserList.get(i).getName()) {
 				System.out.println(String.format("%-10s %-10s %-10s %-10s %-10s", UserList.get(i).getName(), UserList.get(i).getEmail()));		
 				}
-				else if(info == UserList.get(i).getEmail()) {
+				else if(User == UserList.get(i).getEmail()) {
 					System.out.println(String.format("%-10s %-10s %-10s %-10s %-10s", UserList.get(i).getName(), UserList.get(i).getEmail()));
 				}
 				else {
 					System.out.println("Error!");
 				}
 			}
-			
+			// can't do
 		}
 		public static void UserList(ArrayList<User> UserList) {
 			
