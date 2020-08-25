@@ -10,6 +10,9 @@ public class C206_CaseStudyTest {
 
 	private Item i1;
 	private ArrayList<Item> itemList;
+	private User u1;
+	private ArrayList<User> UserList;
+
 
 	public C206_CaseStudyTest() {
 		super();
@@ -91,5 +94,30 @@ public class C206_CaseStudyTest {
 		assertNotNull("Test if there is valid item arraylist to retrieve item", itemList);
 		
 	}
+	@Test// Done by Junwei
+	
+	public void deleteTest() {
+		//check that user list is not null.
+		assertNotNull("Check if there is no empty user List, UserList");
+		// remove customer
+		UserList.remove(0);
+	}
+	
+	@Test// Done by Junwei
+	public void addTest() {
+	// check if arraylist has an item inside
+		assertEquals("Test that UserList arraylist size is 1", 1, UserList.size());
+	}
+	
+	@Test // Done by Junwei
+	public void viewTest() {
+		//check that user is added into UserList
+		assertEquals("Check that User arraylist size is 1", 1, UserList.size());
+		assertSame("Check that User is added", u1, UserList.get(0));
+		
+			
+		}
+		  
+	}
 
-}
+
