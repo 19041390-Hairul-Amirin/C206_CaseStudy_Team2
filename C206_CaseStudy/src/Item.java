@@ -24,6 +24,34 @@ public class Item {
 
 
 
+	public void setName(String name) {
+		Name = name;
+	}
+
+
+
+
+	public void setDescription(String description) {
+		Description = description;
+	}
+
+
+
+
+	public void setMinIncrement(double minIncrement) {
+		this.minIncrement = minIncrement;
+	}
+
+
+
+
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
+	}
+
+
+
+
 	public String getStartDate() {
 		return startDate;
 	}

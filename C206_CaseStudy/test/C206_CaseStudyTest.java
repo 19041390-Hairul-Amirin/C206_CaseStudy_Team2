@@ -33,19 +33,19 @@ public class C206_CaseStudyTest {
 		assertTrue("C206_CaseStudy_SampleTest ", true);
 	}
 
-	@Test
+	@Test // Done by Hairul
 	public void addItemTest() {
-		assertNotNull("Check if there is valid Camcorder arraylist to add to", itemList);
+		assertNotNull("Check if there is valid item arraylist to add to", itemList);
 		ItemDB.addItem(itemList);
 
 		assertEquals("Check that Item arraylist size is 1", 1, itemList.size());
 		assertSame("Check that Item is added", i1, itemList.get(0));
 	}
 
-	@Test
-	public void retrieveAllItem() {
+	@Test // Done by Hairul
+	public void retrieveAllItemTest() {
 		// Test if Item list is not null but empty - boundary
-		assertNotNull("Test if there is valid Camcorder arraylist to retrieve item", itemList);
+		assertNotNull("Test if there is valid item arraylist to retrieve item", itemList);
 
 		String allItem = ItemDB.retrieveAllItem(itemList);
 		String testOutput = "";
@@ -53,9 +53,43 @@ public class C206_CaseStudyTest {
 
 	}
 
-	@Test
+	@Test // Done by Hairul
 	public void deleteItemTest() {
 
+		// check if arraryList is empty
+		assertNotNull("check if arraryList is empty", itemList);
+
+		// check if arraylist has an item inside
+		assertEquals("Test that CustomerList arraylist size is 1", 1, itemList.size());
+
+		// remove customer
+		itemList.remove(0);
+
+		// Test if the code list has worked
+		assertEquals("Test that ItemList arraylist size is 1", 0, itemList.size());
+	}
+
+	@Test// Done by Hairul
+	public void updateItemTest() {
+		// check if arraryList is empty
+		assertNotNull("check if arraryList is empty", itemList);
+		
+		//update for item
+		i1=new Item("Box", "Round Ball", 11, 2, "20/10/2020", "25/10/2020");
+		itemList.set(0,i1);
+		
+		//check if item updated
+		assertEquals("Test if name values are added into ArrayList ",i1.getName(),itemList.get(0).getName());
+		assertEquals("Test if description values are added into ArrayList ",i1.getDescription(),itemList.get(0).getDescription());
+		assertEquals("Test if bid increament values are added into ArrayList ",i1.getMinIncrement(),itemList.get(0).getMinIncrement());
+
+
+	}
+	@Test// Done by Hairul
+	public void searchItemTest() {
+		assertNotNull("check if arraryList is empty", itemList);
+		assertNotNull("Test if there is valid item arraylist to retrieve item", itemList);
+		
 	}
 
 }

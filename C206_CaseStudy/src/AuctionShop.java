@@ -10,8 +10,7 @@ public class AuctionShop {
 			option = Helper.readInt("Enter an option > ");
 			
 			
-			ItemDB.InputItem();
-			ItemDB.AddItem(null, null);
+			
 			
 			
 		}
