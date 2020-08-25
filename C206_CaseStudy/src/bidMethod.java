@@ -61,7 +61,7 @@ public class bidMethod {
 
 	}
 	public static void menu() {
-		AuctionShop.setHeader("Manage Bids");
+		AuctionShop.setHeader("Online Auction Shop");
 		System.out.println("1. Display Bid");
 		System.out.println("2. Add Bid");
 		System.out.println("3. Delete Bid");
